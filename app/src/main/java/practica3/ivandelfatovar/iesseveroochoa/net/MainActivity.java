@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        //BOTON SALIR
 
+        //BOTON SALIR
         btSalir = (Button)findViewById(R.id.btSalir);
         btSalir.setOnClickListener(new View.OnClickListener() {
             @Override
