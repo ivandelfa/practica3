@@ -12,7 +12,7 @@
         android:layout_height="32dp"
         android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="Nuevo Contacto"
+        android:text="@string/nuevo_contacto"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -21,75 +21,61 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/ivEstrella"
+        android:id="@+id/ivFavorito"
         android:layout_width="32dp"
         android:layout_height="26dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
+        android:visibility="invisible"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="0.366"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/ivMujer"
         app:layout_constraintTop_toTopOf="@+id/ivMujer"
         app:srcCompat="@android:drawable/btn_star_big_on" />
 
     <ImageView
         android:id="@+id/ivTelefono"
-        android:layout_width="29dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="@+id/ivContacto"
-        app:layout_constraintHorizontal_bias="0.394"
+        android:layout_width="32dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="36dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/ivParticular"
+        app:layout_constraintHorizontal_bias="0.41"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
-        app:layout_constraintTop_toTopOf="@+id/ivContacto"
+        app:layout_constraintTop_toTopOf="@+id/ivParticular"
         app:srcCompat="@android:drawable/stat_sys_phone_call_forward" />
 
     <ImageView
-        android:id="@+id/ivContacto"
-        android:layout_width="31dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="48dp"
+        android:id="@+id/ivParticular"
+        android:layout_width="32dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="44dp"
+        android:visibility="visible"
         app:layout_constraintEnd_toStartOf="@+id/tvNuevoContacto"
-        app:layout_constraintHorizontal_bias="0.408"
+        app:layout_constraintHorizontal_bias="0.657"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/contacto" />
 
     <ImageView
         android:id="@+id/ivMujer"
-        android:layout_width="30dp"
-        android:layout_height="26dp"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:visibility="visible"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.632"
         app:layout_constraintStart_toEndOf="@+id/tvNombre"
         app:layout_constraintTop_toBottomOf="@+id/tvNuevoContacto"
         app:srcCompat="@drawable/simbolomujer" />
 
-    <RadioButton
-        android:id="@+id/rbEmpresa"
-        android:layout_width="122dp"
-        android:layout_height="45dp"
-        android:text="Empresa"
-        app:layout_constraintEnd_toStartOf="@+id/rbParticular"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline5"
-        app:layout_constraintTop_toBottomOf="@+id/etTelefono" />
-
-    <RadioButton
-        android:id="@+id/rbParticular"
-        android:layout_width="128dp"
-        android:layout_height="45dp"
-        android:text="Particular"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="0.83"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/etTelefono" />
-
     <Switch
-        android:id="@+id/swFavortios"
+        android:id="@+id/schFavoritos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="16dp"
+        android:minHeight="48dp"
         android:text="Favoritos"
-        app:layout_constraintEnd_toStartOf="@+id/rbEmpresa"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toBottomOf="@+id/etTelefono" />
 
@@ -97,33 +83,33 @@
         android:id="@+id/cbRecordarLLamar"
         android:layout_width="143dp"
         android:layout_height="51dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="20dp"
         android:text="Recordar LLamar"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="0.127"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
-        app:layout_constraintTop_toBottomOf="@+id/rbHombre" />
+        app:layout_constraintTop_toBottomOf="@+id/rgSexo" />
 
     <TextView
         android:id="@+id/tvNombre"
         android:layout_width="51dp"
         android:layout_height="19dp"
-        android:text="Nombre"
+        android:text="@string/nombre"
         app:layout_constraintBottom_toTopOf="@+id/tvApellidos"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.93" />
+        app:layout_constraintVertical_bias="0.892" />
 
     <TextView
         android:id="@+id/tvApellidos"
         android:layout_width="69dp"
         android:layout_height="23dp"
-        android:layout_marginTop="124dp"
-        android:text="Apelllidos"
+        android:layout_marginTop="112dp"
+        android:text="@string/apellidos"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -131,10 +117,10 @@
         android:id="@+id/tvEmpresa"
         android:layout_width="56dp"
         android:layout_height="19dp"
-        android:layout_marginTop="4dp"
-        android:text="Empresa"
+        android:layout_marginTop="8dp"
+        android:text="@string/empresa"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toBottomOf="@+id/tvApellidos" />
 
@@ -144,8 +130,8 @@
         android:layout_height="40dp"
         android:layout_marginTop="24dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Télefono"
+        android:inputType="phone"
+        android:hint="Télefono"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="#D6D5D8"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
@@ -153,30 +139,13 @@
         app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toBottomOf="@+id/tvEmpresa" />
 
-    <RadioButton
-        android:id="@+id/rbHombre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hombre"
-        app:layout_constraintEnd_toStartOf="@+id/rbMujer"
-        app:layout_constraintHorizontal_bias="0.754"
-        app:layout_constraintStart_toStartOf="@+id/guideline5"
-        app:layout_constraintTop_toBottomOf="@+id/rbEmpresa" />
-
-    <RadioButton
-        android:id="@+id/rbMujer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="92dp"
-        android:text="Mujer"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintTop_toBottomOf="@+id/rbParticular" />
 
     <Button
         android:id="@+id/btOk"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
+        android:onClick="onClick"
         android:text="Ok"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
@@ -193,12 +162,11 @@
         app:layout_constraintStart_toEndOf="@+id/btOk" />
 
     <SeekBar
-        android:id="@+id/skbEdad"
+        android:id="@+id/skbLlamar"
         android:layout_width="346dp"
         android:layout_height="19dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toBottomOf="@+id/cbRecordarLLamar" />
 
@@ -222,5 +190,92 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_end="395dp" />
+
+    <RadioGroup
+        android:id="@+id/rgEmpresa"
+        android:layout_width="238dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/etTelefono">
+
+        <RadioButton
+            android:id="@+id/rbEmpresa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Empresa" />
+
+        <RadioButton
+            android:id="@+id/rbParticular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Particular" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rgSexo"
+        android:layout_width="238dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.981"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/rgEmpresa">
+
+        <RadioButton
+            android:id="@+id/rbHombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Hombre" />
+
+        <RadioButton
+            android:id="@+id/rbMujer"
+            android:layout_width="99dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Mujer" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/ivEmpresa"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="44dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/tvNuevoContacto"
+        app:layout_constraintHorizontal_bias="0.228"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/empresa" />
+
+    <ImageView
+        android:id="@+id/ivHombre"
+        android:layout_width="32dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="32dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toEndOf="@+id/tvNuevoContacto"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/simbolohombre" />
+
+    <TextView
+        android:id="@+id/tvEdad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/edad"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.274"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbRecordarLLamar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

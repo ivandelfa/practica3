@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Practica3</string>
+    <string name="nuevo_contacto">Nuevo Contacto</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="empresa">Empresa</string>
+    <string name="edad">Edad:</string>
+    <string name="iv_n_delfa_tovar">Iván Delfa Tovar</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="nuevo">Nuevo</string>
+    <string name="salir">Salir</string>
 </resources>
